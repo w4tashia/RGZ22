@@ -1,0 +1,118 @@
+/* Общие стили */
+body {
+  background-color: #1b1b1b; /* Темный фон */
+  background-image: url(bg2.png);
+  color: #ffffff; /* Белый текст для контраста */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Обертывающий контейнер */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Контейнер для графа */
+#pipelineGraph {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;  /* Центрируем граф по горизонтали */
+  align-items: flex-start;  /* Выравнивание по верхнему краю */
+  width: 100%;
+  height: 200px;
+}
+
+/* Стили для textarea */
+textarea {
+  width: 100%;
+  max-width: 100%; /* Убедимся, что textarea не выходит за пределы блока */
+  background-color: #2a2a2a; /* Темный фон для текстового поля */
+  color: #ffffff; /* Белый текст */
+  border: 1px solid #555; /* Серая рамка */
+  padding: 5px;
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Кнопка */
+button {
+  background-color: #1870ce; /* Синий цвет для кнопки */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px; /* Закругленные углы */
+}
+
+button:hover {
+  background-color: #0f549e; /* Темный синий при наведении */
+}
+
+/* Контейнер для кода и вывода */
+.code-result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+/* Стили для блока с кодом */
+.code-block {
+  flex: 1; /* Равномерно делим доступное пространство */
+  margin-right: 20px;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color:#00000080;
+  height: 400px; /* Ограничиваем высоту блока */
+  box-sizing: border-box; /* Учитываем padding в размере блока */
+}
+
+/* Стили для блока с выводом */
+.output-block {
+  flex: 1; /* Равномерно делим доступное пространство */
+  margin-left: 20px;
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: auto; /* Включаем прокрутку в случае переполнения */
+  max-height: 400px; /* Ограничиваем высоту блока */
+  box-sizing: border-box; /* Учитываем padding в размере блока */
+  background-color:#00000080;
+}
+
+/* Стили для текста внутри блока */
+pre {
+  white-space: pre-wrap; /* Перенос длинных строк */
+  word-wrap: break-word; /* Разбиение слов на новые строки при необходимости */
+  color: #e0e0e0; /* Серый цвет для текста */
+  font-family: "Courier New", monospace;
+  font-size: 14px;  /* Уменьшаем размер шрифта, если нужно */
+}
+
+
+/* Стили для квадратиков в графе */
+.stage rect {
+  transition: fill 0.3s;
+}
+
+/* Стили для текста внутри квадратиков */
+.stage text {
+  font-size: 12px;
+  fill: white;
+  font-weight: bold;
+  dominant-baseline: middle; /* Вертикальное выравнивание по центру */
+  text-anchor: middle; /* Горизонтальное выравнивание по центру */
+}
